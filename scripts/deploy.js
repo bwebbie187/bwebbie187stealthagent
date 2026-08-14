@@ -1,13 +1,16 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Agent = await hre.ethers.deployContract("StealthAgent");
-  await Agent.waitForDeployment();
+  const Agent = await hre.ethers.getContractFactory("StealthAgent");
+  const agent = await Agent.deploy();
 
-  console.log("StealthAgent deployed to:", await Agent.getAddress());
+  await agent.waitForDeployment();
+
+  console.log("StealthAgent deployed to:", await agent.getAddress());
 }
 
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+
