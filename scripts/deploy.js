@@ -1,8 +1,8 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Agent = await hre.ethers.getContractFactory("StealthAgent");
-  const agent = await Agent.deploy();
+  const StealthAgent = await hre.ethers.getContractFactory("StealthAgent");
+  const agent = await StealthAgent.deploy();
 
   await agent.waitForDeployment();
 
@@ -13,4 +13,3 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
-
