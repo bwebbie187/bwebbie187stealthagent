@@ -1,11 +1,13 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.20",
   networks: {
-    basesepolia: {
-      url: "https://sepolia.base.org",
-      accounts: [process.env.PRIVATE_KEY]
-    }
-  }
+    goat: {
+      url: process.env.GOAT_RPC,
+      chainId: 48899,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
 };
