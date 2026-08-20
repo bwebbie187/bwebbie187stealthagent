@@ -1,5 +1,4 @@
 # bwebbie187stealthagent
-# bwebbie187stealthagent
 
 A simple onchain micro‑agent built for the Base network.  
 This agent listens for signals, performs small automated actions,  
