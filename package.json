@@ -1,0 +1,19 @@
+{
+  "name": "bwebbie187stealthagent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal on-chain signal contract deployable to Base and GOAT Network.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "deploy:goat-testnet": "hardhat run scripts/deploy.js --network goatTestnet",
+    "deploy:goat": "hardhat run scripts/deploy.js --network goat"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.17"
+  }
+}
